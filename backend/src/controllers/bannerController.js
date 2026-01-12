@@ -1,7 +1,9 @@
+const dbConnect = require("../lib/dbConnect");
 const Banner = require("../models/bannerModel");
 
 // Get All Banners
 exports.getAllBanners = async (req, res) => {
+    await dbConnect();
     try {
         const banners = await Banner.find();
         res.status(200).json({
