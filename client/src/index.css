@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+:root {
+  --transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --deep-twilight: #03045eff;
+  --bright-teal-blue: #0077b6ff;
+  --turquoise-surf: #00b4d8ff;
+  --frosted-blue: #90e0efff;
+  --light-cyan: #caf0f8ff;
+}

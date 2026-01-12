@@ -1,0 +1,8 @@
+.skills-grad {
+  background: #f2f9ff;
+  background: linear-gradient(
+    270deg,
+    rgb(237, 243, 255) 0%,
+    rgb(247, 251, 255) 100%
+  );
+}

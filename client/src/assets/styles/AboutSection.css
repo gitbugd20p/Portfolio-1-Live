@@ -1,0 +1,19 @@
+.about-grad {
+  background: #f2f9ff;
+  background: linear-gradient(
+    270deg,
+    rgb(237, 243, 255) 0%,
+    rgb(247, 251, 255) 100%
+  );
+}
+
+/* Fix DaisyUI timeline vertical centering */
+.timeline-left.timeline-vertical > li {
+  --timeline-row-start: auto;
+  --timeline-row-end: 1fr;
+  justify-items: start;
+}
+
+.timeline-left .timeline-middle {
+  margin-top: 0.25rem;
+}

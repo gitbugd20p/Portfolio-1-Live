@@ -1,0 +1,8 @@
+.projects-grad {
+  background: #f2f9ff;
+  background: linear-gradient(
+    270deg,
+    rgb(247, 251, 255) 0%,
+    rgba(237, 243, 255, 1) 100%
+  );
+}
