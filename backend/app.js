@@ -22,7 +22,7 @@ app.use(hpp());
 
 // Rate limiting
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000,
+    windowMs: 1 * 60 * 1000,
     max: 100,
     message: "Too many requests from this IP, please try again later.",
 });
@@ -32,13 +32,7 @@ app.use(limiter);
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json({ limit: "100mb" }));
-app.use(express.urlencoded({ limit: "100mb", extended: true })); // Increased limit for larger payloads
-
-// // CORS configuration for production
-// app.use(cors({
-//     origin: process.env.CORS_ORIGIN || "http://localhost:3000",
-//     credentials: true,
-// }));
+app.use(express.urlencoded({ limit: "100mb", extended: true }));
 
 // Database connection
 const url = process.env.DB_URL;

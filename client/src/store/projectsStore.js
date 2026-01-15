@@ -19,6 +19,22 @@ const projectsStore = create((set) => ({
       set({ projectError: error.message, projectLoading: false });
     }
   },
+
+  // ======================
+  // GET PROJECT BY ID
+  // ======================
+  getProjectById: async (id) => {
+    try {
+      set({ projectLoading: true });
+      const res = await axios.get(`${baseURL}/projects/${id}`);
+      set({ projectLoading: false });
+      return res.data.data;
+    } catch (error) {
+      console.log(error);
+      set({ projectLoading: false });
+      throw new Error("Unable to fetch project");
+    }
+  },
 }));
 
 export default projectsStore;

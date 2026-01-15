@@ -32,7 +32,7 @@ const Projects = () => {
         )}
 
         {/* Grid */}
-        <div className="grid grid-cols-1 justify-items-center gap-4 pt-6 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 justify-items-center gap-4 pt-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Skeletons */}
           {projectLoading &&
             Array.from({ length: 6 }).map((_, i) => (
@@ -41,8 +41,8 @@ const Projects = () => {
 
           {/* Actual Projects */}
           {!projectLoading &&
-            projectList.map((project) => (
-              <ProjectCard key={project._id} project={project} />
+            projectList.map((project, id) => (
+              <ProjectCard key={project._id} project={project} id={id} />
             ))}
         </div>
       </div>
