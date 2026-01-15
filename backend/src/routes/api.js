@@ -32,6 +32,9 @@ router.get("/social-media", socialMediaController.getAllSocialMedia);
 // Get all projects
 router.get("/projects", projectsController.getAllProjects);
 
+// Get project by ID
+router.get("/projects/:id", projectsController.getProjectById);
+
 //=> Email (Contact) routes
 // User send emails
 router.post("/create-send-email", sendEmailController.createSendEmail);
