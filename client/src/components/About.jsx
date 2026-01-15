@@ -7,8 +7,7 @@ import educationStore from "./../store/educationStore";
 import heroImg from "../assets/images/portfolio-card.png";
 
 const About = () => {
-  const { educationList, educationLoading, getAllEducations } =
-    educationStore();
+  const { educationList, getAllEducations } = educationStore();
 
   useEffect(() => {
     getAllEducations();
