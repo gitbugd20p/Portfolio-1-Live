@@ -45,7 +45,7 @@ const Footer = () => {
                 <a
                   className="tooltip hover:bg-(--light-cyan)"
                   data-tip="facebook"
-                  href="google.com"
+                  href="facebook.com"
                 >
                   <FaFacebookSquare size={32} />
                 </a>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <a
                   className="tooltip hover:bg-(--light-cyan)"
                   data-tip="linkedin"
-                  href="google.com"
+                  href="https://www.linkedin.com/in/mdsabur/"
                 >
                   <FaLinkedin size={32} />
                 </a>

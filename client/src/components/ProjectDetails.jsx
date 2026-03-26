@@ -90,6 +90,31 @@ const ProjectDetails = () => {
               {description}
             </p>
 
+            {/* Actions */}
+            <div className="mt-10 flex flex-wrap gap-4">
+              {liveLink && (
+                <a
+                  href={liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn rounded-full border border-sky-200 bg-sky-100 text-sky-700 hover:border-sky-600 hover:bg-sky-900 hover:text-white"
+                >
+                  View Live Project
+                </a>
+              )}
+
+              {githubLink && (
+                <a
+                  href={githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn rounded-full border border-indigo-200 bg-indigo-100 text-indigo-700 hover:border-indigo-600 hover:bg-gray-900 hover:text-white"
+                >
+                  View Source Code
+                </a>
+              )}
+            </div>
+
             {/* Technologies */}
             {technologies?.length > 0 && (
               <div className="mt-8">
@@ -123,31 +148,6 @@ const ProjectDetails = () => {
                 </ul>
               </div>
             )}
-
-            {/* Actions */}
-            <div className="mt-10 flex flex-wrap gap-4">
-              {liveLink && (
-                <a
-                  href={liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn rounded-full border border-sky-200 bg-sky-100 text-sky-700 hover:border-sky-600 hover:bg-sky-900 hover:text-white"
-                >
-                  View Live Project
-                </a>
-              )}
-
-              {githubLink && (
-                <a
-                  href={githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn rounded-full border border-indigo-200 bg-indigo-100 text-indigo-700 hover:border-indigo-600 hover:bg-gray-900 hover:text-white"
-                >
-                  View Source Code
-                </a>
-              )}
-            </div>
           </div>
         </div>
       </div>

@@ -9,17 +9,17 @@ const Contact = () => {
     {
       icon: FaLocationDot,
       title: "Address",
-      description: "New Mexico, 31134",
+      description: "Matikata, Dhaka Cantonment, Dhaka-1206",
     },
     {
       icon: FaEnvelope,
       title: "My Email",
-      description: "mymail@mail.com",
+      description: "mdsabur1010@gmail.com",
     },
     {
       icon: FaPhone,
       title: "Call Me Now",
-      description: "00-123 00000",
+      description: "Provide upon request",
     },
   ];
 

@@ -46,6 +46,14 @@ const Navbar = () => {
       >
         Contact
       </a>
+
+      <a
+        href="https://drive.google.com/file/d/1y-SvaQzQ9sVVsW08AwcuEB4394O80nxg/view?usp=drive_link"
+        target="_blank"
+        className="mx-2 rounded-md bg-(--light-cyan) px-4 py-2 text-(--deep-twilight) transition-all duration-300 hover:bg-(--deep-twilight) hover:text-white"
+      >
+        Resume
+      </a>
     </>
   );
 

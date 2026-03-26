@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "../assets/styles/AboutSection.css";
 import { FaFacebookSquare } from "react-icons/fa";
-import { FaSquareTwitter } from "react-icons/fa6";
+import { FaGithub, FaSquareTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import educationStore from "./../store/educationStore";
 import heroImg from "../assets/images/portfolio-card.png";
@@ -75,7 +75,7 @@ const About = () => {
               <div className="card-body items-center text-center">
                 <h2 className="card-title">mdsabur1010@gmail.com</h2>
                 <p>
-                  B-171 Matikata, Dhaka Cantonment, <br /> Dhaka-1206
+                  Matikata, Dhaka Cantonment, <br /> Dhaka-1206
                 </p>
               </div>
             </div>
@@ -96,6 +96,15 @@ const About = () => {
               <li>
                 <a
                   className="tooltip hover:bg-(--light-cyan)"
+                  data-tip="linkedin"
+                  href="https://www.linkedin.com/in/mdsabur/"
+                >
+                  <FaLinkedin size={32} />
+                </a>
+              </li>
+              <li>
+                <a
+                  className="tooltip hover:bg-(--light-cyan)"
                   data-tip="facebook"
                   href="google.com"
                 >
@@ -111,22 +120,13 @@ const About = () => {
                   <FaSquareTwitter size={32} />
                 </a>
               </li>
-              <li>
-                <a
-                  className="tooltip hover:bg-(--light-cyan)"
-                  data-tip="linkedin"
-                  href="google.com"
-                >
-                  <FaLinkedin size={32} />
-                </a>
-              </li>
             </ul>
           </div>
 
           {/* Download CV */}
           <div className="">
             <a
-              href="https://drive.google.com/file/d/1vmMbDGXoLgeKyvWMWGbC_oCU_TuQeOV_/view?usp=sharing"
+              href="https://drive.google.com/file/d/1y-SvaQzQ9sVVsW08AwcuEB4394O80nxg/view?usp=drive_link"
               target="_blank"
             >
               <button className="btn-grad w-96 border border-(--bright-teal-blue)">
