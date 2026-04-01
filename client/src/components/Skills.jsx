@@ -1,42 +1,50 @@
 import "../assets/styles/SkillsSection.css";
 import SectionTopHeader from "./SectionTopHeader";
 import SkillCard from "./SkillCard";
+import { motion } from "motion/react";
 
 const Skills = () => {
+  const skillsData = [
+    { name: "HTML", img: "HTML5.png" },
+    { name: "CSS", img: "CSS.png" },
+    { name: "JS (ES6+)", img: "ES6.png" },
+    { name: "TailwindCSS", img: "TAILWINDCSS.png" },
+    { name: "React", img: "REACT.png" },
+    { name: "Node JS", img: "NODEJS.png" },
+    { name: "Express JS", img: "EXPRESS_JS.png" },
+    { name: "Mongo DB", img: "MONGODB.png" },
+    { name: "Git & Github", img: "GIT.png" },
+    { name: "REST API", img: "REST_API.png" },
+  ];
   return (
     <section id="skills" className="skills-grad scroll-mt-16 p-16">
-      <div className="w-full">
+      <div className="container mx-auto">
         {/* Skills Top */}
-        <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-8"
+        >
           <SectionTopHeader
-            header="Skills"
-            paraOne="Here's a selection of my recent work, showcasing my skills in creating
-        user-centric and visually appealing interfaces."
-            hClassName="text-5xl font-semibold"
-            pClassNameOne="mx-auto max-w-lg pt-6"
+            header="Technical Skills"
+            paraOne="A comprehensive suite of modern technologies I use to bring performant and scalable web applications to life."
+            hClassName="text-5xl font-extrabold text-white text-center"
+            pClassNameOne="mx-auto max-w-lg pt-6 text-slate-400 text-center"
             secondPara={false}
-            paraTwo=""
-            pClassNameTwo=""
           />
-        </div>
+        </motion.div>
 
         {/* Frontend Skills */}
-        <div className="flex w-full flex-col gap-8 md:flex-row">
-          {/* Right grid => Skill Cards */}
-          <div className="grid flex-1 grid-cols-1 justify-items-center gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-            {/* Cards */}
-            <SkillCard name="HTML" img="HTML5.png" />
-            <SkillCard name="CSS" img="CSS.png" />
-            <SkillCard name="JS (ES6+)" img="ES6.png" />
-            <SkillCard name="TAILWINDCSS" img="TAILWINDCSS.png" />
-            <SkillCard name="Git & Github" img="GIT.png" />
-            <SkillCard name="MONGO DB" img="MONGODB.png" />
-            <SkillCard name="EXPRESS JS" img="EXPRESS_JS.png" />
-            <SkillCard name="REACT" img="REACT.png" />
-            <SkillCard name="NODE JS" img="NODEJS.png" />
-            <SkillCard name="REST API" img="REST_API.png" />
-            {/* Add more SkillCards */}
-          </div>
+        <div className="grid grid-cols-2 justify-items-center gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {skillsData.map((skill, index) => (
+            <SkillCard
+              key={index}
+              name={skill.name}
+              img={skill.img}
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </section>
