@@ -25,3 +25,21 @@
     #1e293b
   ) !important;
 }
+
+/* Project details page */
+.back-btn {
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-btn:hover {
+  color: var(--turquoise-surf);
+  transform: translateX(-5px);
+}
+
+.feature-item::marker {
+  color: var(--bright-teal-blue);
+}
