@@ -3,52 +3,61 @@ import SectionTopHeader from "./SectionTopHeader";
 import ContactSmallCards from "./ContactSmallCards";
 import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
 import ContactForm from "./ContactForm";
+import { motion } from "motion/react";
 
 const Contact = () => {
   const addressData = [
     {
       icon: FaLocationDot,
-      title: "Address",
-      description: "Dhaka Cantonment, Dhaka-1206",
+      title: "Location",
+      description: "Dhaka, Bangladesh",
     },
     {
       icon: FaEnvelope,
-      title: "My Email",
+      title: "Email",
       description: "mdsabur1010@gmail.com",
     },
     {
       icon: FaPhone,
-      title: "Call Me Now",
-      description: "Provide upon request",
+      title: "Phone",
+      description: "Available upon request",
     },
   ];
 
   return (
-    <section id="contact" className="contact-grad scroll-mt-16 p-16">
+    <section id="contact" className="skills-grad scroll-mt-16 lg:p-24">
       {/* Contact Section */}
-      <div className="flex w-full flex-col rounded-md bg-white shadow-lg md:flex-row">
-        {/* Left Side contact information */}
-        <div className="w-full p-16 md:w-1/2">
-          <SectionTopHeader
-            sectionTopClassName="text-start pb-12"
-            header="Let’s discuss your Project"
-            paraOne="I'm available for freelance work. Drop me a line if you have a project you think I'd be a good fit for."
-            hClassName="text-5xl font-semibold"
-            pClassNameOne="max-w-lg pt-6"
-          />
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="glass-effect flex flex-col overflow-hidden rounded-4xl border border-white/5 shadow-2xl md:flex-row"
+        >
+          {/* Left Side contact information */}
+          <div className="w-full border-b border-white/5 p-10 md:w-1/2 md:border-r md:border-b-0 lg:p-16">
+            <SectionTopHeader
+              sectionTopClassName="text-start pb-10"
+              header="Let’s Build the Future Together"
+              paraOne="I am actively seeking an Junior Full-Stack role or Internship. I’m ready to apply my MERN expertise and passion for scalable systems to help your team succeed."
+              hClassName="text-5xl font-semibold"
+              pClassNameOne="max-w-lg pt-6"
+            />
 
-          {/* Contact small-cards */}
-          <div className="space-y-4">
-            {addressData?.map((item, index) => (
-              <ContactSmallCards item={item} key={index} />
-            ))}
+            {/* Contact small-cards */}
+            <div className="space-y-4">
+              {addressData.map((item, index) => (
+                <ContactSmallCards item={item} key={index} index={index} />
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Right Side contact form */}
-        <div className="w-full p-16 md:w-1/2">
-          <ContactForm />
-        </div>
+          {/* Right Side contact form */}
+          <div className="w-full bg-white/2 p-10 md:w-1/2 lg:p-16">
+            <ContactForm />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

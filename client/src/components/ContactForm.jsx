@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import contactStore from "../store/contactStore";
 import { toast } from "react-toastify";
+import { motion } from "motion/react";
 
 const ContactForm = () => {
   const { sendEmail, loading, error, success, resetStatus } = contactStore();
@@ -46,12 +47,14 @@ const ContactForm = () => {
     return () => clearTimeout(timer);
   }, [success, resetStatus]);
 
+  const inputClasses =
+    "w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none";
+
   return (
-    <div className="w-full max-w-lg rounded-xl bg-white">
-      <p className="mb-6 text-xl font-semibold text-gray-400">
-        I'm always open to discussing product design work or partnership
-        opportunities.
-      </p>
+    <div className="w-full">
+      <h3 className="mb-6 text-xl font-semibold text-white">
+        Sent a Email/Message
+      </h3>
 
       <form className="space-y-4" onSubmit={handleSubmit}>
         {/* Name */}
@@ -62,7 +65,7 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none"
+          className={inputClasses}
         />
 
         {/* Email */}
@@ -73,7 +76,7 @@ const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none"
+          className={inputClasses}
         />
 
         {/* Location */}
@@ -83,7 +86,7 @@ const ContactForm = () => {
           placeholder="City, Country"
           value={formData.location}
           onChange={handleChange}
-          className="w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none"
+          className={inputClasses}
         />
 
         {/* Budget */}
@@ -93,7 +96,7 @@ const ContactForm = () => {
           placeholder="Budget"
           value={formData.budget}
           onChange={handleChange}
-          className="w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none"
+          className={inputClasses}
         />
 
         {/* Subject */}
@@ -104,7 +107,7 @@ const ContactForm = () => {
           value={formData.subject}
           onChange={handleChange}
           required
-          className="w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none"
+          className={inputClasses}
         />
 
         {/* Message */}
@@ -115,7 +118,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none"
+          className={inputClasses}
         />
 
         {/* Error */}
@@ -127,17 +130,17 @@ const ContactForm = () => {
         )}
 
         {/* Submit Button */}
-        <button
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           type="submit"
           disabled={loading}
           className={`w-full rounded-lg py-3 font-semibold text-white shadow-md transition-all duration-300 ${
-            loading
-              ? "cursor-not-allowed bg-gray-400"
-              : "bg-purple-600 hover:bg-purple-700"
+            loading ? "cursor-not-allowed bg-gray-400" : "btn-grad"
           }`}
         >
-          {loading ? "Sending..." : "Submit"}
-        </button>
+          {loading ? "SENDING..." : "SEND MESSAGE"}
+        </motion.button>
       </form>
     </div>
   );
