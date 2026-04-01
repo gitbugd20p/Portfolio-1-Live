@@ -5,7 +5,8 @@
 }
 
 :root {
-  --transition: 0.3s ease;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
 }
 
 html {
@@ -13,9 +14,20 @@ html {
 }
 
 @theme {
-  --deep-twilight: #03045eff;
-  --bright-teal-blue: #0077b6ff;
-  --turquoise-surf: #00b4d8ff;
-  --frosted-blue: #90e0efff;
-  --light-cyan: #caf0f8ff;
+  --deep-twilight: #03045e;
+  --bright-teal-blue: #0077b6;
+  --turquoise-surf: #00b4d8;
+  --frosted-blue: #90e0ef;
+  --light-cyan: #caf0f8;
+
+  --bg-dark: #020617;
+  --bg-card: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+.glass-effect {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

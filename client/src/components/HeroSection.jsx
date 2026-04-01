@@ -4,6 +4,7 @@ import bannerStore from "../store/bannerStore";
 import HeroSkeleton from "./../skeletons/HeroSkeleton";
 import heroImg from "../assets/images/hero_image.png";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "motion/react";
 
 const HeroSection = () => {
   const { bannerInfo, bannerLoading, bannerInfoRequest } = bannerStore();
@@ -12,65 +13,70 @@ const HeroSection = () => {
     bannerInfoRequest();
   }, [bannerInfoRequest]);
 
-  if (bannerLoading) {
-    return <HeroSkeleton />;
-  }
+  if (bannerLoading) return <HeroSkeleton />;
 
   return (
-    <section id="hero" className="hero hero-grad scroll-mt-16 p-16">
-      <div className="hero-content w-full flex-col lg:flex-row-reverse">
-        {/* Image (40%) */}
-        <div className="flex w-full justify-center lg:w-2/5">
+    <section
+      id="hero"
+      className="bg-bg-dark flex min-h-screen items-center px-6 lg:px-16"
+    >
+      <div className="container mx-auto flex flex-col items-center justify-between gap-10 lg:flex-row-reverse">
+        {/* Image from the right */}
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex w-full justify-center lg:w-2/5"
+        >
           <img
             src={heroImg}
-            className="max-h-124 min-w-sm rounded-lg"
+            className="max-h-100 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,119,182,0.2)] lg:max-h-125"
             alt="Hero"
           />
-        </div>
+        </motion.div>
 
-        {/* Text (60%) */}
-        <div className="w-full lg:w-3/5">
-          <h1 className="text-6xl font-bold">
-            <span className="mb-2 block">
-              <span className="text-5xl font-medium text-gray-600">Hello</span>,{" "}
-              <span className="text-6xl text-(--bright-teal-blue)">I’m</span>
+        {/* Text from the left */}
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full text-left lg:w-3/5"
+        >
+          <h1 className="text-5xl font-bold text-white lg:text-7xl">
+            <span className="text-text-muted mb-2 block text-3xl font-medium">
+              Hello, I'm
             </span>
-
-            <span className="mt-2 block text-7xl font-bold tracking-tight text-gray-900">
-              {bannerInfo?.header}
-            </span>
-
-            <span className="mt-4 block min-h-[1.2em] text-4xl font-semibold text-(--deep-twilight)">
-              <Typewriter
-                words={[
-                  "Frontend Engineer",
-                  "React Enthusiast",
-                  "UI-Focused Web Developer",
-                  "Building Scalable MERN Apps",
-                ]}
-                loop
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={40}
-                delaySpeed={1500}
-              />
-            </span>
+            <span className="text-gradient">{bannerInfo?.header}</span>
           </h1>
 
-          <p className="max-w-2xl py-6 text-justify text-xl text-gray-600">
+          <div className="text-turquoise-surf mt-4 h-10 text-2xl font-semibold lg:text-3xl">
+            <Typewriter
+              words={[
+                "Frontend Engineer",
+                "React Developer",
+                "Building Real World Apps with MERN Stack",
+              ]}
+              loop
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+            />
+          </div>
+
+          <p className="text-text-muted max-w-xl py-6 text-lg leading-relaxed">
             {bannerInfo?.description}
           </p>
-          <a
-            href="mailto:mdsabur1010@gmail.com"
-            target="_blank"
-            className="block w-fit"
-          >
-            <button className="btn-grad m-0! border border-(--bright-teal-blue)">
-              Say Hello!
-            </button>
-          </a>
-        </div>
+
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <a
+              href="mailto:mdsabur1010@gmail.com"
+              className="btn-grad w-72 rounded-xl px-10 py-4 font-bold tracking-wide"
+            >
+              LET'S TALK
+            </a>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import projectFallbackImg from "/images/project_img.png";
 
 const ProjectCard = ({ project }) => {
-  const { _id, title, description, liveLink, category, image } = project;
+  const { _id, title, description, liveLink, githubLink, category, image } =
+    project;
 
   return (
     <div className="card w-md border border-white bg-white/70 shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-200/50">
@@ -29,18 +30,29 @@ const ProjectCard = ({ project }) => {
 
         <p className="line-clamp-3 text-sm text-gray-600">{description}</p>
 
-        {liveLink && (
-          <div className="card-actions justify-start">
+        <div className="mt-5 flex flex-wrap gap-4">
+          {liveLink && (
             <a
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn rounded-full border border-gray-300 bg-white hover:border-gray-600 hover:bg-(--deep-twilight) hover:text-white"
+              className="btn rounded-full border border-sky-200 bg-sky-100 text-sky-700 hover:border-sky-600 hover:bg-sky-900 hover:text-white"
             >
-              See Live Project
+              View Live Project
             </a>
-          </div>
-        )}
+          )}
+
+          {githubLink && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn rounded-full border border-indigo-200 bg-indigo-100 text-indigo-700 hover:border-indigo-600 hover:bg-gray-900 hover:text-white"
+            >
+              View Source Code
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

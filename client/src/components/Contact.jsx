@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: FaLocationDot,
       title: "Address",
-      description: "Matikata, Dhaka Cantonment, Dhaka-1206",
+      description: "Dhaka Cantonment, Dhaka-1206",
     },
     {
       icon: FaEnvelope,
