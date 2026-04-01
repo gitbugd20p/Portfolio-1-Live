@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "../assets/styles/AboutSection.css";
 import { FaFacebookSquare } from "react-icons/fa";
-import { FaGithub, FaSquareTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import educationStore from "./../store/educationStore";
 import heroImg from "../assets/images/portfolio-card.png";
@@ -124,14 +124,27 @@ const About = () => {
                 {
                   Icon: FaLinkedin,
                   link: "https://www.linkedin.com/in/mdsabur/",
+                  tip: "LinkedIn",
+                  color: "hover:text-blue-400",
                 },
-                { Icon: FaFacebookSquare, link: "#" },
-                { Icon: FaGithub, link: "#" },
+                {
+                  Icon: FaFacebookSquare,
+                  link: "#",
+                  tip: "Facebook",
+                  color: "hover:text-blue-500",
+                },
+                {
+                  Icon: FaGithub,
+                  link: "https://github.com/gitbugd20p",
+                  tip: "GitHub",
+                  color: "hover:text-white",
+                },
               ].map((item, i) => (
                 <li key={i}>
                   <a
                     href={item.link}
-                    className="hover:text-turquoise-surf text-slate-300 transition-colors"
+                    className={`hover:text-turquoise-surf tooltip text-slate-300 transition-colors ${item.color}`}
+                    data-tip={item.tip}
                   >
                     <item.Icon size={28} />
                   </a>
