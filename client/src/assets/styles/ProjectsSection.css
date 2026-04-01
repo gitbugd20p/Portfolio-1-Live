@@ -1,8 +1,27 @@
 .projects-grad {
-  background: #f2f9ff;
-  background: linear-gradient(
-    270deg,
-    rgb(247, 251, 255) 0%,
-    rgba(237, 243, 255, 1) 100%
-  );
+  background: radial-gradient(circle at 100% 100%, #0f172a 0%, #020617 100%);
+}
+
+.project-card-custom {
+  background: rgba(30, 41, 59, 0.5) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card-custom:hover {
+  border-color: var(--bright-teal-blue) !important;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 119, 182, 0.2);
+}
+
+.skeleton {
+  background-color: #1e293b !important;
+  background-image: linear-gradient(
+    90deg,
+    #1e293b,
+    #334155,
+    #1e293b
+  ) !important;
 }
