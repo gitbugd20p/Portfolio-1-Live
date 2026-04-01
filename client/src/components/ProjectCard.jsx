@@ -33,11 +33,11 @@ const ProjectCard = ({ project, id }) => {
           {category}
         </span>
 
-        <h2 className="card-title hover:text-bright-teal-blue mt-2 text-2xl font-bold text-white transition-colors hover:underline">
+        <h2 className="card-title hover:text-bright-teal-blue text-text-main mt-2 text-2xl font-bold transition-colors hover:underline">
           <Link to={`/projects/${_id}`}>{title}</Link>
         </h2>
 
-        <p className="line-clamp-3 text-justify text-sm leading-relaxed text-slate-400">
+        <p className="text-text-muted line-clamp-3 text-justify text-sm leading-relaxed">
           {description}
         </p>
 

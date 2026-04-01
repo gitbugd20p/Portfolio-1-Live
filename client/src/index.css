@@ -14,16 +14,16 @@ html {
 }
 
 @theme {
-  --deep-twilight: #03045e;
-  --bright-teal-blue: #0077b6;
-  --turquoise-surf: #00b4d8;
-  --frosted-blue: #90e0ef;
-  --light-cyan: #caf0f8;
+  --color-deep-twilight: #03045e;
+  --color-bright-teal-blue: #0077b6;
+  --color-turquoise-surf: #00b4d8;
+  --color-frosted-blue: #90e0ef;
+  --color-light-cyan: #caf0f8;
 
-  --bg-dark: #020617;
-  --bg-card: #0f172a;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  --color-bg-dark: #020617;
+  --color-bg-card: #0f172a;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
 }
 
 .glass-effect {

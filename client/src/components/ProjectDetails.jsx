@@ -72,7 +72,7 @@ const ProjectDetails = () => {
   };
 
   return (
-    <section className="projects-grad min-h-screen p-8">
+    <section className="projects-grad min-h-screen px-6 py-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         {/* Back */}
         <motion.button
@@ -111,11 +111,11 @@ const ProjectDetails = () => {
               {category}
             </span>
 
-            <h1 className="mt-4 text-3xl leading-tight font-extrabold text-white lg:text-4xl">
+            <h1 className="text-text-main mt-4 text-3xl leading-tight font-extrabold lg:text-4xl">
               {title}
             </h1>
 
-            <p className="mt-6 text-lg leading-relaxed text-slate-300">
+            <p className="text-text-muted mt-6 text-lg leading-relaxed">
               {description}
             </p>
 
@@ -128,7 +128,7 @@ const ProjectDetails = () => {
                   href={liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn rounded-full border border-sky-200 bg-sky-100 text-sky-700 hover:border-sky-600 hover:bg-sky-900 hover:text-white"
+                  className="btn hover:text-text-main rounded-full border border-sky-200 bg-sky-100 text-sky-700 hover:border-sky-600 hover:bg-sky-900"
                 >
                   Live-link
                 </motion.a>
@@ -141,7 +141,7 @@ const ProjectDetails = () => {
                   href={githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn rounded-full border border-indigo-200 bg-indigo-100 text-indigo-700 hover:border-indigo-600 hover:bg-gray-900 hover:text-white"
+                  className="btn hover:text-text-main rounded-full border border-indigo-200 bg-indigo-100 text-indigo-700 hover:border-indigo-600 hover:bg-gray-900"
                 >
                   Source Code
                 </motion.a>

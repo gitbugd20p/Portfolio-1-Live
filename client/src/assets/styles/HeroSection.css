@@ -1,9 +1,9 @@
 .btn-grad {
   background-image: linear-gradient(
     to right,
-    var(--deep-twilight) 0%,
-    var(--bright-teal-blue) 51%,
-    var(--deep-twilight) 100%
+    var(--color-deep-twilight) 0%,
+    var(--color-bright-teal-blue) 51%,
+    var(--color-deep-twilight) 100%
   );
 }
 
@@ -30,8 +30,8 @@
 .text-gradient {
   background: linear-gradient(
     to right,
-    var(--bright-teal-blue),
-    var(--frosted-blue)
+    var(--color-bright-teal-blue),
+    var(--color-frosted-blue)
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

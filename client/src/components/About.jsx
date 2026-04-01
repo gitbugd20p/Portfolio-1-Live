@@ -15,7 +15,10 @@ const About = () => {
   }, [getAllEducations]);
 
   return (
-    <section id="about" className="about-grad min-h-screen scroll-mt-16 p-16">
+    <section
+      id="about"
+      className="about-grad min-h-screen scroll-mt-16 px-6 py-16 lg:px-16"
+    >
       <div className="container mx-auto flex flex-col-reverse items-center justify-between gap-12 lg:flex-row-reverse">
         {/* Right Side (60%) */}
         <motion.div
@@ -55,10 +58,10 @@ const About = () => {
                   transition={{ delay: index * 0.1 }}
                   className="timeline-end timeline-box mb-6 p-5 shadow-xl"
                 >
-                  <time className="text-turquoise-surf block font-mono italic">
+                  <time className="text-bright-teal-blue block font-mono italic">
                     {edu.yearFrom} – {edu.yearTo}
                   </time>
-                  <div className="text-xl font-bold text-white">
+                  <div className="text-text-main text-xl font-bold">
                     {edu.degree}
                   </div>
                   <p className="text-text-muted mt-1">
@@ -83,9 +86,11 @@ const About = () => {
           {/* Card */}
           <div className="hover-3d transition-transform duration-500 hover:scale-105">
             {/* content */}
-            <div className="card bg-base-100 w-96 py-6 shadow-sm">
+            <div className="card bg-base-100 py-6 shadow-sm sm:w-80 md:w-84 lg:w-96">
               <div className="card-body items-center pb-0 text-center">
-                <h2 className="text-2xl font-bold text-white">Hi! I'm Sabur</h2>
+                <h2 className="text-text-main text-2xl font-bold">
+                  Hi! I'm Sabur
+                </h2>
                 <p className="text-turquoise-surf font-medium tracking-wider uppercase">
                   Frontend Engineer
                 </p>
@@ -98,7 +103,7 @@ const About = () => {
                 />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="font-mono text-sm text-slate-300">
+                <h2 className="text-text-muted font-mono text-sm">
                   mdsabur1010@gmail.com
                 </h2>
                 <p className="text-text-muted mt-2 text-sm">
@@ -119,7 +124,7 @@ const About = () => {
 
           {/* Social */}
           <motion.div whileHover={{ y: -5 }} className="mt-8 flex gap-4">
-            <ul className="menu menu-horizontal rounded-2xl border border-white/10 bg-white/5 p-2">
+            <ul className="menu menu-horizontal bg-bg-card/50 rounded-2xl border border-white/10 p-2">
               {[
                 {
                   Icon: FaLinkedin,
@@ -159,7 +164,7 @@ const About = () => {
               href="https://drive.google.com/file/d/1y-SvaQzQ9sVVsW08AwcuEB4394O80nxg/view?usp=drive_link"
               target="_blank"
             >
-              <button className="btn-grad w-96 border border-(--bright-teal-blue) text-lg font-bold">
+              <button className="btn-grad border-bright-teal-blue border text-lg font-bold md:w-84 lg:w-96">
                 View CV
               </button>
             </a>

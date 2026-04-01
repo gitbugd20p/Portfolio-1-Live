@@ -48,15 +48,15 @@ const ContactForm = () => {
   }, [success, resetStatus]);
 
   const inputClasses =
-    "w-full border-b-2 border-gray-400 px-4 py-3 focus:border-purple-500 focus:outline-none";
+    "w-full border-b-2 border-white/20 bg-transparent px-4 py-3 text-text-main placeholder:text-text-muted focus:border-bright-teal-blue focus:outline-none transition-colors";
 
   return (
     <div className="w-full">
-      <h3 className="mb-6 text-xl font-semibold text-white">
+      <h3 className="text-text-main mb-6 text-xl font-semibold">
         Sent a Email/Message
       </h3>
 
-      <form className="space-y-4" onSubmit={handleSubmit}>
+      <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
         {/* Name */}
         <input
           type="text"
@@ -126,7 +126,9 @@ const ContactForm = () => {
 
         {/* Success */}
         {success && (
-          <p className="text-sm text-green-600">Message sent successfully!</p>
+          <p className="text-turquoise-surf text-sm">
+            Message sent successfully!
+          </p>
         )}
 
         {/* Submit Button */}
@@ -136,7 +138,7 @@ const ContactForm = () => {
           type="submit"
           disabled={loading}
           className={`w-full rounded-lg py-3 font-semibold text-white shadow-md transition-all duration-300 ${
-            loading ? "cursor-not-allowed bg-gray-400" : "btn-grad"
+            loading ? "cursor-not-allowed bg-white/20" : "btn-grad"
           }`}
         >
           {loading ? "SENDING..." : "SEND MESSAGE"}

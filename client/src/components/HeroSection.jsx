@@ -18,7 +18,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="bg-bg-dark flex min-h-screen items-center px-6 lg:px-16"
+      className="bg-bg-dark flex min-h-screen items-center px-6 py-24 lg:px-48 lg:py-0"
     >
       <div className="container mx-auto flex flex-col items-center justify-between gap-10 lg:flex-row-reverse">
         {/* Image from the right */}
@@ -30,7 +30,7 @@ const HeroSection = () => {
         >
           <img
             src={heroImg}
-            className="max-h-100 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,119,182,0.2)] lg:max-h-125"
+            className="max-h-100 w-64 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(0,119,182,0.2)] md:w-75 lg:max-h-125"
             alt="Hero"
           />
         </motion.div>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full text-left lg:w-3/5"
         >
-          <h1 className="text-5xl font-bold text-white lg:text-7xl">
+          <h1 className="text-text-main text-5xl font-bold lg:text-7xl">
             <span className="text-text-muted mb-2 block text-3xl font-medium">
               Hello, I'm
             </span>
@@ -71,7 +71,7 @@ const HeroSection = () => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <a
               href="mailto:mdsabur1010@gmail.com"
-              className="btn-grad w-72 rounded-xl px-10 py-4 font-bold tracking-wide"
+              className="btn-grad rounded-xl px-10 py-4 font-bold tracking-wide md:w-72 lg:w-84"
             >
               LET'S TALK
             </a>

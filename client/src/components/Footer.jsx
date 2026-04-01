@@ -39,14 +39,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="footer footer-horizontal footer-center border-t border-white/25 bg-(--bg-dark) pt-16 pb-4 text-slate-400 shadow-lg">
+    <footer className="footer footer-horizontal footer-center bg-bg-dark text-text-muted border-t border-white/5 px-6 pt-12 pb-4 shadow-lg lg:pt-16">
       {/* Nav-links */}
       <nav className="grid grid-flow-col gap-6">
         {navLinks.map((link) => (
           <a
             key={link.name}
             href={link.href}
-            className="link link-hover underline decoration-transparent transition-colors duration-300 hover:text-white hover:decoration-(--light-cyan)"
+            className="link link-hover hover:text-turquoise-surf hover:decoration-light-cyan underline decoration-transparent transition-colors duration-300"
           >
             {link.name}
           </a>

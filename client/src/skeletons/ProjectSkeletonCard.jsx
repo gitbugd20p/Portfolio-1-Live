@@ -1,6 +1,6 @@
 const ProjectSkeletonCard = () => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
+    <div className="card bg-base-100 w-full max-w-md shadow-sm">
       {/* Image Skeleton */}
       <div className="skeleton h-64 w-full"></div>
 

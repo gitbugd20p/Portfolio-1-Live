@@ -17,7 +17,10 @@ const Skills = () => {
     { name: "REST API", img: "REST_API.png" },
   ];
   return (
-    <section id="skills" className="skills-grad scroll-mt-16 p-16">
+    <section
+      id="skills"
+      className="skills-grad scroll-mt-16 px-6 py-16 lg:px-16"
+    >
       <div className="container mx-auto">
         {/* Skills Top */}
         <motion.div
@@ -29,14 +32,14 @@ const Skills = () => {
           <SectionTopHeader
             header="Technical Skills"
             paraOne="A comprehensive suite of modern technologies I use to bring performant and scalable web applications to life."
-            hClassName="text-5xl font-extrabold text-white text-center"
-            pClassNameOne="mx-auto max-w-lg pt-6 text-slate-400 text-center"
+            hClassName="text-5xl font-extrabold text-text-main text-center"
+            pClassNameOne="mx-auto max-w-lg pt-6 text-text-muted text-center"
             secondPara={false}
           />
         </motion.div>
 
         {/* Frontend Skills */}
-        <div className="grid grid-cols-2 justify-items-center gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="grid grid-cols-2 justify-items-center gap-5 sm:gap-6 md:grid-cols-3 md:gap-8 lg:grid-cols-4 xl:grid-cols-5">
           {skillsData.map((skill, index) => (
             <SkillCard
               key={index}

@@ -10,7 +10,7 @@
 }
 
 .project-card-custom:hover {
-  border-color: var(--bright-teal-blue) !important;
+  border-color: var(--color-bright-teal-blue) !important;
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.4),
     0 0 20px rgba(0, 119, 182, 0.2);
@@ -28,7 +28,7 @@
 
 /* Project details page */
 .back-btn {
-  color: var(--text-muted);
+  color: var(--color-text-muted);
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
@@ -36,10 +36,10 @@
 }
 
 .back-btn:hover {
-  color: var(--turquoise-surf);
+  color: var(--color-turquoise-surf);
   transform: translateX(-5px);
 }
 
 .feature-item::marker {
-  color: var(--bright-teal-blue);
+  color: var(--color-bright-teal-blue);
 }

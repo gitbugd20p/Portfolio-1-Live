@@ -25,7 +25,10 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="skills-grad scroll-mt-16 lg:p-24">
+    <section
+      id="contact"
+      className="skills-grad scroll-mt-16 px-6 py-16 lg:p-24"
+    >
       {/* Contact Section */}
       <div className="container mx-auto">
         <motion.div
@@ -36,7 +39,7 @@ const Contact = () => {
           className="glass-effect flex flex-col overflow-hidden rounded-4xl border border-white/5 shadow-2xl md:flex-row"
         >
           {/* Left Side contact information */}
-          <div className="w-full border-b border-white/5 p-10 md:w-1/2 md:border-r md:border-b-0 lg:p-16">
+          <div className="w-full border-b border-white/5 p-6 sm:p-8 md:w-1/2 md:border-r md:border-b-0 lg:p-16">
             <SectionTopHeader
               sectionTopClassName="text-start pb-10"
               header="Let’s Build the Future Together"
@@ -54,7 +57,7 @@ const Contact = () => {
           </div>
 
           {/* Right Side contact form */}
-          <div className="w-full bg-white/2 p-10 md:w-1/2 lg:p-16">
+          <div className="bg-bg-card/30 w-full p-6 sm:p-8 md:w-1/2 lg:p-16">
             <ContactForm />
           </div>
         </motion.div>

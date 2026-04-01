@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="projects-grad min-h-screen scroll-mt-16 p-16"
+      className="projects-grad min-h-screen scroll-mt-16 px-6 py-16 lg:px-16"
     >
       <div className="container mx-auto">
         {/* Project Top */}
@@ -43,7 +43,7 @@ const Projects = () => {
         )}
 
         {/* Grid */}
-        <div className="grid grid-cols-1 justify-items-center gap-4 pt-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 justify-items-center gap-6 pt-6 md:grid-cols-2 lg:grid-cols-3">
           {projectLoading
             ? Array.from({ length: 6 }).map((_, i) => (
                 <ProjectSkeletonCard key={i} />

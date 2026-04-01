@@ -10,8 +10,10 @@
 }
 
 .skill-card-glass:hover {
-  border-color: var(--turquoise-surf) !important;
+  border-color: var(--color-turquoise-surf) !important;
   background: rgba(30, 41, 59, 0.7) !important;
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(0, 180, 216, 0.25);
 }

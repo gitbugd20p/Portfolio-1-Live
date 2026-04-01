@@ -12,8 +12,8 @@ const SectionTopHeader = ({
 }) => {
   return (
     <div className={`${sectionTopClassName}`}>
-      <h1 className={`${hClassName}`}>{header}</h1>
-      <p className={`${pClassNameOne}`}>{paraOne}</p>
+      <h1 className={`text-text-main ${hClassName}`}>{header}</h1>
+      <p className={`text-text-muted ${pClassNameOne}`}>{paraOne}</p>
       {/* Second paragraph */}
       {secondPara && <p className={`${pClassNameTwo}`}>{paraTwo}</p>}
     </div>
