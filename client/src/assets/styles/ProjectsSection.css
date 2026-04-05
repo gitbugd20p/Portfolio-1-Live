@@ -43,3 +43,7 @@
 .feature-item::marker {
   color: var(--color-bright-teal-blue);
 }
+
+.all-projects-page {
+  background: radial-gradient(circle at top right, #04044d 0%, #020617 100%);
+}

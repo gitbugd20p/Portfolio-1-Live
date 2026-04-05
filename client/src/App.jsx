@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import MainLayout from "./layout/MainLayout";
 import Home from "./page/Home";
 import ProjectDetails from "./components/ProjectDetails";
+import AllProjects from "./page/AllProjects";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           {/* Main Layout Routes */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<AllProjects />} />
             <Route path="/projects/:id" element={<ProjectDetails />} />
           </Route>
         </Routes>

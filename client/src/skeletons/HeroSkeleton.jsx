@@ -1,6 +1,6 @@
 const HeroSkeleton = () => {
   return (
-    <section className="hero hero-grad scroll-mt-16 px-6 py-16 lg:px-16">
+    <section className="hero hero-grad bg-bg-dark scroll-mt-16 px-6 py-16 lg:px-16">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
         {/* Left content */}
         <div className="flex-1 space-y-6">
